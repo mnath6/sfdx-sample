@@ -13,7 +13,7 @@ public with sharing class DemoController {
 
         if (lastName != null) {
             // Query the object
-            Contact theContact = [SELECT ID, LastName, FirstName
+            Contact theContact = [SELECT ID, LastName, FirstName, MobilePhone
              FROM Contact WHERE LastName = :lastName LIMIT 1];
 
             // this will set the Id, so now you can use the standard controller and just reference fields on the page
